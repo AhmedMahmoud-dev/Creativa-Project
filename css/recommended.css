@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+
+.recommended .header {
+  margin: 24px 0;
+  background-color: white;
+  border-radius: 8px;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recommended .header a {
+  color: black;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  transition: color .2s;
+}
+
+.recommended .header a:hover {
+  color: #006937;
+}
+
+.recommended .cards {
+  display: flex;
+
+  gap: 12px;
+  /* align-items: center; */
+  flex-wrap: wrap;
+}
+
+.recommended .cards .card {
+  width: calc((100% - (12px * 4))/ 5);
+  padding: 22px 12px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.recommended .card .control {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  /* backdrop-filter: blur(5px); */
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: rgba(146, 148, 159, 0.5);
+  color: white;
+  position: absolute;
+  right: -50px;
+  transition: right .3s;
+}
+
+.recommended .card .control i {
+  transition: color .2s, transform .2s;
+}
+
+.recommended .card .control i:hover {
+  color: red;
+  transform: scale(1.2);
+}
+
+.recommended .cards .card:hover .control {
+  right: 15px;
+}
+
+.recommended .cards .card .discount {
+  padding: 6px 12px;
+  /* width: fit-content; */
+  background-color: #dd3842;
+  position: absolute;
+  border-radius: 4px;
+  color: white;
+}
+
+.recommended .cards .image {
+  padding: 8px 0;
+}
+
+.recommended img {
+  width: 100%;
+  height: auto;
+}
+
+.recommended .cards .info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recommended .cards .info .title a {
+  font-size: 18px;
+  color: #006937;
+  font-weight: 600;
+}
+
+.recommended .cards .info p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #92949F;
+}
+
+.recommended .cards .info .rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.recommended .cards .info .rating .stars {
+  color: #dd3842;
+  font-size: 10px;
+}
+
+.recommended .cards .info .price {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.recommended .cards .info .price .old-price {
+  text-decoration: line-through;
+  color: #92949F;
+}
+
+.recommended .cards .info button {
+  padding: 12px;
+  color: #006937;
+  border: 1px solid #006937;
+  border-radius: 4px;
+  background-color: transparent;
+  font-size: 16px;
+  transition: color .2s, background-color .2s;
+  outline: none;
+  cursor: pointer;
+}
+
+
+.recommended .cards .info button:hover {
+  background-color: #006937;
+  color: white;
+}

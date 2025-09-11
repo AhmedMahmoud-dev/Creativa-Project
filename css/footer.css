@@ -1,0 +1,110 @@
+footer {
+  padding: 40px 0;
+}
+
+footer .icons {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
+
+footer .icons i {
+  padding: 8px;
+  border: 1px solid #006937;
+  border-radius: 4px;
+  color: #006937;
+  font-size: 20px;
+}
+
+footer ul li a {
+  color: #92949F;
+  text-decoration: none;
+  transition: .2s color, .2s text-decoration;
+}
+
+footer ul li a:hover {
+  color: #006937;
+  text-decoration: underline;
+}
+
+footer .contact-info .icon {
+  width: 32px;
+  height: 32px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #006937;
+  border-radius: 4px;
+  color: #006937;
+  font-size: 20px;
+  transition: .2s color, .2s background-color;
+  cursor: pointer;
+}
+
+footer .contact-info .icon:hover {
+  color: white;
+  background-color: #006937;
+}
+
+footer .contact-info i.special {
+  padding-right: 13px;
+}
+
+footer .contact-info span {
+  font-size: 14px;
+  color: #92949F;
+}
+
+footer .copyright p {
+  color: #92949F;
+  font-size: 14px;
+}
+
+footer .copyright a {
+  color: #006937;
+  text-decoration: none;
+}
+
+/* footer .images img {
+  width: 40px;
+  height: auto;
+} */
+
+
+.subscribe-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* max-width: 400px; */
+  /* optional: control overall size */
+}
+
+.subscribe-box input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  font-size: 14px;
+}
+
+.subscribe-box input::placeholder {
+  color: #92949F;
+}
+
+.subscribe-box button {
+  padding: 10px 20px;
+  background-color: #006937;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 0 5px 5px 0;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.subscribe-box button:hover {
+  background-color: #006937;
+}
