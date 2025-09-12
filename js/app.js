@@ -58,3 +58,12 @@ fetch('testemonial.html')
     const rec = document.getElementById('testemonial');
     if (rec) rec.innerHTML = data;
   })
+
+
+fetch('testemonial2.html')
+  .then(response => response.text())
+  .then(data => {
+    // document.getElementById('testemonial2').innerHTML = data;
+    const rec = document.getElementById('testemonial2');
+    if (rec) rec.innerHTML = data;
+  })
