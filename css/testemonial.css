@@ -1,7 +1,69 @@
+/* .testemonial {
+  padding: 3rem 0;
+} */
+
 .testemonial .content {
   border: 1px solid rgba(146, 148, 159, 0.3);
   padding: 35px 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
   border-radius: 4px;
+  transition: all 0.3s ease;
+  background: white;
+  cursor: pointer;
+}
+
+.testemonial .content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: rgba(146, 148, 159, 0.5);
+}
+
+.testemonial img {
+  max-height: 70px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.testemonial .content:hover img {
+  transform: scale(1.05);
+}
+
+.brand-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 768px) {
+  .testemonial .content {
+    padding: 25px 15px;
+    margin-bottom: 15px;
+  }
+
+  .testemonial img {
+    max-height: 50px;
+  }
+
+  .brand-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .testemonial .content {
+    padding: 20px 10px;
+  }
+
+  .testemonial img {
+    max-height: 40px;
+  }
+
+  .brand-title {
+    font-size: 1.3rem;
+  }
 }

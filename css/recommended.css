@@ -40,7 +40,7 @@
 }
 
 .recommended .cards .card {
-  width: calc((100% - (12px * 4))/ 5);
+  /* width: calc((100% - (12px * 4))/ 5); */
   padding: 22px 12px;
   background-color: white;
   border-radius: 6px;
