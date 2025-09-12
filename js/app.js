@@ -49,3 +49,12 @@ fetch('recommended.html')
     const rec = document.getElementById('recommended');
     if (rec) rec.innerHTML = data;
   })
+
+
+fetch('testemonial.html')
+  .then(response => response.text())
+  .then(data => {
+    // document.getElementById('testemonial').innerHTML = data;
+    const rec = document.getElementById('testemonial');
+    if (rec) rec.innerHTML = data;
+  })
