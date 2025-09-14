@@ -107,6 +107,12 @@
   font-weight: 600;
 }
 
+.recommended .cards .info .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .recommended .cards .info p {
   white-space: nowrap;
   overflow: hidden;
