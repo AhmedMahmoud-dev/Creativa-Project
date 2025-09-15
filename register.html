@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/register.css">
+  <script src="/js/bootstrap.bundle.min.js" defer></script>
+  <script src="/js/register.js" defer></script>
+</head>
+
+<body class="d-flex align-items-center min-vh-100">
+  <div class="container">
+    <div class="row">
+      <form id="registerForm" class="col-12 col-md-9 col-lg-6 rounded-2 shadow-lg px-3 py-5 mx-auto">
+        <h1 class="text-center mb-4">Register Form</h1>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+          <label for="name">Name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+          <label for="email">Email</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone">
+          <label for="phone">Phone</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+          <label for="password">Password</label>
+        </div>
+        <div class="form-floating mb-4">
+          <input type="password" class="form-control" name="rePassword" id="rePassword" placeholder="rePassword">
+          <label for="rePassword">Password</label>
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-lg btn-outline-success d-block mx-auto">Sign Up</button>
+        </div>
+        <p id="error" class="d-none text-danger text-center"></p>
+        <p class="text-center">Already have an account? <a class="text-decoration-none fs-6" href="login.html">Login
+            here</a></p>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

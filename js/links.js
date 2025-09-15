@@ -30,6 +30,11 @@ fetch('navbar.html')
     });
 
     updateButtons();
+
+    if (localStorage.getItem('token')) {
+      document.getElementById('username').innerHTML = localStorage.getItem('user');
+      document.getElementById('logged').classList.add('d-none');
+    }
   })
 
 
