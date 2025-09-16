@@ -1,0 +1,59 @@
+.latest-blogs .header {
+  margin: 24px 0;
+  background-color: white;
+  border-radius: 8px;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.latest-blogs .header a {
+  color: black;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  transition: color .2s;
+}
+
+.latest-blogs .header a:hover {
+  color: #006937;
+}
+
+.latest-blogs .date {
+  font-size: 14px;
+}
+
+.latest-blogs .date i {
+  color: #006937;
+}
+
+.latest-blogs h2 {
+  font-size: 18px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* number of lines you want */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.latest-blogs h2 a {
+  color: black;
+}
+
+.latest-blogs p {
+  font-size: 14px;
+  color: #92949F;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* number of lines you want */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.latest-blogs .read-more {
+  color: black;
+
+}

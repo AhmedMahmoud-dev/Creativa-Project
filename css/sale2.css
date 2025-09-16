@@ -1,0 +1,60 @@
+section.sale2 {
+  background-image: url('../images/imgi_197_sale-banner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1920 / 201;
+  padding: 12px 0;
+}
+
+.sale2 h2 {
+  color: white;
+}
+
+.sale2 h2 span {
+  color: #ffcc00;
+}
+
+.sale2 .button {
+  padding: 18px 32px;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  transition: color .2s, background-color .2s;
+  border: 0;
+  outline: 0;
+  border-radius: 8px;
+}
+
+.sale2 .button:hover {
+  color: black;
+  background-color: white;
+}
+
+.sale2 img {
+  transition: transform .3s;
+}
+
+.sale2 img:hover {
+  transform: scale(0.9);
+}
+
+.sale2 .count {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  justify-content: center;
+}
+
+.sale2 .number {
+  padding: 18px 24px;
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.sale2 .count span {
+  color: white;
+}

@@ -1,0 +1,25 @@
+section.sale1 {
+  background-image: url('../images/imgi_197_sale-banner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1920 / 201;
+  padding: 12px 0;
+}
+
+.sale1 h2 {
+  color: white;
+  font-weight: 600;
+}
+
+.sale1 h2 span {
+  color: #ffcc00;
+}
+
+.sale1 img {
+  transition: transform .3s;
+}
+
+.sale1 img:hover {
+  transform: scale(0.9);
+}

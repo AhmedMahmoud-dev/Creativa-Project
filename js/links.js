@@ -81,3 +81,81 @@ fetch('popular.html')
     const rec = document.getElementById('popular');
     if (rec) rec.innerHTML = data;
   })
+
+
+
+fetch('sale1.html')
+  .then(response => response.text())
+  .then(data => {
+    // document.getElementById('sale1').innerHTML = data;
+    const rec = document.getElementById('sale1');
+    if (rec) rec.innerHTML = data;
+  })
+
+
+
+fetch('sale2.html')
+  .then(response => response.text())
+  .then(data => {
+    // document.getElementById('sale2').innerHTML = data;
+    const rec = document.getElementById('sale2');
+    if (rec) rec.innerHTML = data;
+
+
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 100);
+    targetDate.setHours(targetDate.getHours() + 10); // +10 hours
+    targetDate.setMinutes(targetDate.getMinutes() + 3); // +3 minutes
+    targetDate.setSeconds(targetDate.getSeconds() + 20); // +20 seconds
+
+    const day = document.getElementById('day');
+    const hour = document.getElementById('hour');
+    const minute = document.getElementById('minute');
+    const second = document.getElementById('second');
+
+
+
+    function updateCountDown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance <= 0) {
+        // document.getElementById('countdown').innerHTML = 'Offer Ended!';
+        clearInterval(timer);
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      day.innerHTML = days;
+      hour.innerHTML = hours;
+      minute.innerHTML = minutes;
+      second.innerHTML = seconds;
+    }
+
+    updateCountDown();
+    const timer = setInterval(updateCountDown, 1000);
+  })
+
+
+
+fetch('feature-products.html')
+  .then(response => response.text())
+  .then(data => {
+    // document.getElementById('feature-products').innerHTML = data;
+    const rec = document.getElementById('feature-products');
+    if (rec) rec.innerHTML = data;
+  })
+
+
+
+fetch('latest-blog.html')
+  .then(response => response.text())
+  .then(data => {
+    // document.getElementById('latest-blog').innerHTML = data;
+    const rec = document.getElementById('latest-blog');
+    if (rec) rec.innerHTML = data;
+  })
