@@ -75,6 +75,9 @@
 .input-group .dropdown-menu {
   z-index: 1050;
 }
+.dropdown-menu{
+  z-index: 2000;
+}
 
 @media (max-width: 992px) {
   .search-bar {
