@@ -18,6 +18,7 @@ section.sale1 {
 
 .sale1 img {
   transition: transform .3s;
+  width: 80%;
 }
 
 .sale1 img:hover {
