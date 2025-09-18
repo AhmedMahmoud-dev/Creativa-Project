@@ -114,16 +114,16 @@
 /* Hero image */
 /* Hero slides */
 .hero-slide {
-  background: url(/images/imgi_10_hero-Banner.png) center/cover no-repeat;
+  background: url(../images/imgi_10_hero-Banner.png) center/cover no-repeat;
   min-height: 377px;
 }
 
 .carousel-item:nth-child(2) .hero-slide {
-  background: url(/images/imgi_12_hero-Banner-1.2.png) center/cover no-repeat;
+  background: url(../images/imgi_12_hero-Banner-1.2.png) center/cover no-repeat;
 }
 
 .carousel-item:nth-child(3) .hero-slide {
-  background: url(/images/imgi_14_hero-Banner-1.3.png) center/cover no-repeat;
+  background: url(../images/imgi_14_hero-Banner-1.3.png) center/cover no-repeat;
 }
 
 /* Indicators */
