@@ -41,76 +41,140 @@
       </div>
     </div>
   </div>
-  <div class="parttwo-Head border-bottom">
-    <nav class="navbar navbar-expand-lg bg-white">
-      <div class="container">
-        <div class="row w-100 align-items-center">
-          <!-- Logo -->
-          <div class="col-6 col-lg-2">
-            <a class="navbar-brand" href="#">
-              <img src="images/imgi_200_logo_1024x1024.png" alt="Logo" class="w-75" />
-            </a>
+  <div class="header bg-white">
+    <div class="container large">
+      <div class="row align-items-center">
+        <div class="col-lg-2">
+          <div class="logo">
+            <img src="/images/imgi_5_logo_140x@2x.png" alt="LOGO">
           </div>
-
-          <!-- Search Bar -->
-          <div class="col-12 col-lg-7 mt-3 mt-lg-0">
-            <form class="d-flex search-bar">
-              <div class="input-group w-100 position-relative">
-                <button class="btn dropdown-toggle border bg-white" type="button" id="allCategoriesDropdown"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  All Categories
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="allCategoriesDropdown">
-                  <li>
-                    <a class="dropdown-item" href="#">All Categories</a>
-                  </li>
-                  <li><a class="dropdown-item" href="#">Accessories</a></li>
-                  <li><a class="dropdown-item" href="#">Electronics</a></li>
-                  <li><a class="dropdown-item" href="#">Fashion</a></li>
-                </ul>
-                <input type="search" class="form-control border" placeholder="Search for products ..."
-                  aria-label="Search" />
-                <button class="btn btn-success px-4" type="submit">
-                  Search
-                </button>
+        </div>
+        <div class="col-lg-6">
+          <div class="search-input">
+            <div class="dropdown bg-white">
+              <button class="btn dropdown-toggle p-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categories
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+            <input type="text" placeholder="Search...">
+            <button class="button">Search</button>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="control d-flex align-items-center justify-content-xxl-evenly justify-content-between">
+            <div class="user">
+              <i class="fa-regular fa-user"></i>
+              <div class="d-flex flex-column">
+                <a href="#" class="text-secondary">Login</a>
+                <a href="#">Account</a>
               </div>
-            </form>
-          </div>
-
-          <!-- Icons -->
-          <div class="col-6 col-lg-3 mt-3 mt-lg-0 d-flex  align-items-center gap-4 icons_navbar">
-            <ul class="m-0">
-              <li class="span-icon user-icon list-unstyled d-flex align-items-center">
-                <a href="#" class="text-decoration-none pe-2">
-                  <i class="fa-regular fa-user"></i>
-                </a>
-                <span class="d-flex flex-column">
-                  <span class="l" id="logged" onclick="window.location.href='register.html'">Register</span>
-                  <span id="username" class="a">Account</span>
-                </span>
-              </li>
-            </ul>
-
-            <i class="fa-regular fa-heart position-relative">
-              <span class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle">0</span>
-            </i>
-
-            <ul class="m-0">
-              <li class="span-icon list-unstyled d-flex align-items-center">
-                <a href="#" class="text-decoration-none pe-2 position-relative">
-                  <i class="fa-solid fa-cart-plus"></i>
-                  <span class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle">0</span>
-                </a>
-                <span class="d-flex flex-column ps-3">
-                  <span class="l">YourCart</span>
-                  <span class="a">Rs.0.00</span>
-                </span>
-              </li>
-            </ul>
+            </div>
+            <div class="wishlist position-relative">
+              <i class="fa-regular fa-heart"></i>
+              <div class="number">2</div>
+            </div>
+            <div class="cart position-relative">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <div class="number">5</div>
+            </div>
+            <div class="cart-price">
+              <small>Your Cart</small>
+              <span>12000.00 EGP</span>
+            </div>
           </div>
         </div>
       </div>
-    </nav>
+    </div>
+    <div class="container small">
+      <div class="content d-flex align-items-center justify-content-between flex-wrap gap-4">
+        <span class="icon-left" id="btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path
+              d="M19.2188 3.125H0.78125C0.349766 3.125 0 3.40481 0 3.75C0 4.09519 0.349766 4.375 0.78125 4.375H19.2188C19.6502 4.375 20 4.09519 20 3.75C20 3.40481 19.6502 3.125 19.2188 3.125Z"
+              fill="#006937"></path>
+            <path
+              d="M19.2188 9.375H0.78125C0.349766 9.375 0 9.65481 0 10C0 10.3452 0.349766 10.625 0.78125 10.625H19.2188C19.6502 10.625 20 10.3452 20 10C20 9.65481 19.6502 9.375 19.2188 9.375Z"
+              fill="#006937"></path>
+            <path
+              d="M19.2188 15.625H0.78125C0.349766 15.625 0 15.9048 0 16.25C0 16.5952 0.349766 16.875 0.78125 16.875H19.2188C19.6502 16.875 20 16.5952 20 16.25C20 15.9048 19.6502 15.625 19.2188 15.625Z"
+              fill="#006937"></path>
+          </svg>
+        </span>
+        <div class="logo">
+          <img src="images/imgi_5_logo_140x@2x.png" alt="LOGO">
+        </div>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+    </div>
+    <div class="footer-nav">
+      <div class="container">
+        <ul>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-house"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-shop"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-brands fa-searchengin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-heart"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <aside id="aSide">
+      <div class="close">
+        <span id="close">
+          Close
+          <i class="fa-solid fa-xmark"></i>
+        </span>
+      </div>
+      <div class="menu">
+        <div class="search">
+          <input type="text" placeholder="Search...">
+          <span>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+        </div>
+        <ul>
+          <li>
+            <span>
+              <i class="fa-solid fa-user"></i>
+            </span>
+            <span>
+              Login / Register
+            </span>
+          </li>
+          <li>Home</li>
+          <li>Shop</li>
+          <li>Page</li>
+          <li>Blog</li>
+          <li>WishList (8)</li>
+          <li>Compare (0)</li>
+          <li>Contact US</li>
+        </ul>
+      </div>
+    </aside>
   </div>
 </header>
 <nav class="sticky-top">

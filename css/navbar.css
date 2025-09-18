@@ -299,3 +299,265 @@
   cursor: not-allowed;
   box-shadow: none;
 }
+
+
+
+
+
+/* NavBar Start */
+
+.header {
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+  padding: 12px 18px;
+}
+
+.header .logo {
+  width: 80%;
+}
+
+.header .logo img {
+  width: 100%;
+  display: block;
+}
+
+.header .search-input {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border: 1px solid var(--gray-color);
+  border-radius: 8px;
+}
+
+.header .search-input input {
+  border: 0;
+  outline: none;
+  flex-grow: 1;
+}
+
+.header .search-input .button {
+  padding: 8px 16px;
+  border: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: var(--main-color);
+  color: white;
+}
+
+/* .header .control {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+} */
+
+.header .control .user {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header i {
+  font-size: 28px;
+}
+
+.header .control .user a {
+  text-decoration: none;
+  color: black;
+}
+
+.header .control .user a:first-child {
+  font-size: 14px;
+}
+
+.header .number {
+  position: absolute;
+  background-color: var(--red-color);
+  width: 22px;
+  height: 22px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  top: -10px;
+  right: -15px;
+}
+
+.header .cart-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.header .cart-price small {
+  font-size: 14px;
+  color: var(--gray-color);
+}
+
+/* ---------------------------------------------- */
+
+.header .small {
+  display: none;
+}
+
+.header .small .icon-left {
+  cursor: pointer;
+}
+
+.header .footer-nav {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 0;
+  background-color: var(--main-color);
+}
+
+.header .footer-nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.header .footer-nav ul li a {
+  color: white;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+.header .footer-nav ul li a:hover {
+  color: var(--red-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .header .large {
+    display: none;
+  }
+
+  .header .footer-nav {
+    display: block;
+  }
+
+  .header .small {
+    display: block;
+  }
+}
+
+.header .small .logo {
+  width: fit-content;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.header .small img {
+  width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .header .small .logo {
+    width: 50%;
+  }
+}
+
+#aSide.open {
+  transform: translateX(0)
+}
+
+.header aside {
+  background-color: #006937;
+  width: 400px;
+  transform: translateX(-400px);
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  padding: 30px 20px;
+  transition: transform .5s;
+}
+
+.header aside .close {
+  text-align: end;
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  /* cursor: pointer; */
+}
+
+.header aside .close span {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header aside .menu {
+  margin-top: 20px;
+}
+
+.header aside .menu .search {
+  position: relative;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+
+.header aside .menu .search input {
+  outline: none;
+  border: 0;
+  border-radius: 8px;
+  width: 100%;
+  padding: 12px 18px;
+  box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header aside .menu .search span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+  display: flex;
+  width: 38px;
+  height: 38px;
+  background-color: var(--main-color);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.header aside .menu .search span i {
+  font-size: 20px;
+}
+
+.header aside ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+.header aside ul li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.header aside ul li i {
+  font-size: 20px;
+}
+
+/* NavBar End */

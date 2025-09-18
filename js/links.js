@@ -31,10 +31,21 @@ fetch('navbar.html')
 
     updateButtons();
 
-    if (localStorage.getItem('token')) {
-      document.getElementById('username').innerHTML = localStorage.getItem('user');
-      document.getElementById('logged').classList.add('d-none');
-    }
+    // if (localStorage.getItem('token')) {
+    //   document.getElementById('username').innerHTML = localStorage.getItem('user');
+    //   document.getElementById('logged').classList.add('d-none');
+    // }
+
+    const openAside = document.getElementById('btn');
+    const closeAside = document.getElementById('close');
+
+    openAside.addEventListener('click', (e) => {
+      document.getElementById('aSide').classList.add('open');
+    })
+
+    closeAside.addEventListener('click', (e) => {
+      document.getElementById('aSide').classList.remove('open');
+    })
   })
 
 
