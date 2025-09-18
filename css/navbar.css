@@ -471,7 +471,7 @@
 
 .header aside {
   background-color: #006937;
-  width: 400px;
+  width: 320px;
   transform: translateX(-400px);
   position: fixed;
   z-index: 9999999;
