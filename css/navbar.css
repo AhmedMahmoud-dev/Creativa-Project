@@ -436,6 +436,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .imgsWeb {
+    display: none;
+  }
+
   .header .large {
     display: none;
   }
