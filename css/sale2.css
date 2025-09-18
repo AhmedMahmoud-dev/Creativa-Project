@@ -58,3 +58,7 @@ section.sale2 {
 .sale2 .count span {
   color: white;
 }
+
+.sale2 .image {
+  width: 80%;
+}
