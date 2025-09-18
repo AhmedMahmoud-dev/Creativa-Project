@@ -1,9 +1,9 @@
 fetch('navbar.html')
   .then(response => response.text())
   .then(data => {
-    // document.getElementById('navbar').innerHTML = data;
-    // const navbar = document.getElementById('navbar');
-    // if (navbar) navbar.innerHTML = data;
+    document.getElementById('navbar').innerHTML = data;
+    const navbar = document.getElementById('navbar');
+    if (navbar) navbar.innerHTML = data;
     // const wrapper = document.getElementById("categoriesWrapper");
     // const btnLeft = document.getElementById("scrollLeft");
     // const btnRight = document.getElementById("scrollRight");
