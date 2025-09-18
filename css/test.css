@@ -1,0 +1,95 @@
+header {
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+  padding: 12px 18px;
+}
+
+header .logo {
+  width: 80%;
+}
+
+header .logo img {
+  width: 100%;
+  display: block;
+}
+
+header .search-input {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border: 1px solid var(--gray-color);
+  border-radius: 8px;
+}
+
+header .search-input .input {
+  display: flex;
+  align-items: center;
+}
+
+header .search-input input {
+  border: 0;
+  outline: none;
+  flex-grow: 1;
+}
+
+header .search-input .button {
+  padding: 8px 16px;
+  border: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: var(--main-color);
+  color: white;
+}
+
+header .control {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* gap: 16px; */
+}
+
+header .control .user {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+header i {
+  font-size: 28px;
+}
+
+header .control .user a {
+  text-decoration: none;
+  color: black;
+}
+
+header .control .user a:first-child {
+  font-size: 14px;
+}
+
+header .number {
+  position: absolute;
+  background-color: var(--red-color);
+  width: 22px;
+  height: 22px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  top: -10px;
+  right: -15px;
+}
+
+header .cart-price {
+  display: flex;
+  flex-direction: column;
+}
+
+header .cart-price small {
+  font-size: 14px;
+  color: var(--gray-color);
+
+}

@@ -15,3 +15,9 @@ body {
 a {
   text-decoration: none;
 }
+
+:root {
+  --main-color: #006937;
+  --gray-color: #92949F;
+  --red-color: #dd3842;
+}

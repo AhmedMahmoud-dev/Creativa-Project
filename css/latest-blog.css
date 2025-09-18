@@ -17,7 +17,7 @@
 }
 
 .latest-blogs .header a:hover {
-  color: #006937;
+  color: var(--main-color);
 }
 
 .latest-blogs .date {
@@ -25,7 +25,7 @@
 }
 
 .latest-blogs .date i {
-  color: #006937;
+  color: var(--main-color);
 }
 
 .latest-blogs h2 {
@@ -44,7 +44,7 @@
 
 .latest-blogs p {
   font-size: 14px;
-  color: #92949F;
+  color: var(--gray-color);
   display: -webkit-box;
   -webkit-line-clamp: 3;
   /* number of lines you want */

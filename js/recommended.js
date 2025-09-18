@@ -11,10 +11,9 @@ products.addEventListener('load', () => {
 
   var data = products.response.data;
 
-  // Shuffle using Fisher-Yates
   for (let i = data.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [data[i], data[j]] = [data[j], data[i]]; // swap
+    [data[i], data[j]] = [data[j], data[i]];
   }
 
   var recommended = data.slice(0, 4);

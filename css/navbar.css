@@ -6,7 +6,7 @@
 }
 
 .con-head1 {
-  background-color: #006937;
+  background-color: var(--main-color);
 }
 
 .btn-light {
@@ -75,7 +75,8 @@
 .input-group .dropdown-menu {
   z-index: 1050;
 }
-.dropdown-menu{
+
+.dropdown-menu {
   z-index: 2000;
 }
 
@@ -103,7 +104,7 @@
 
 .partthree-Head .nav-link.active,
 .partthree-Head .nav-link:hover {
-  color: var(--mainColor, green);
+  color: var(--main-color);
 }
 
 .partthree-Head {
@@ -211,7 +212,7 @@
 }
 
 .boton-elegante:hover {
-  border-color: #444;
+  border-color: var(--gray-color);
   background: #292929;
   color: #fff;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
@@ -280,7 +281,7 @@
 }
 
 .scroll-btn:hover:not(.disabled) {
-  background: var(--mainColor);
+  background: var(--main-color);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 

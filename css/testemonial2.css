@@ -20,9 +20,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #006937;
+  border: 1px solid var(--main-color);
   margin: auto 0;
-  /* color: #006937; */
+  /* color: var(--main-color); */
   border-radius: 4px;
 }
 
@@ -31,5 +31,5 @@
 }
 
 .testemonial2 .info p {
-  color: #92949F;
+  color: var(--gray-color);
 }
