@@ -2,34 +2,34 @@ fetch('navbar.html')
   .then(response => response.text())
   .then(data => {
     // document.getElementById('navbar').innerHTML = data;
-    const navbar = document.getElementById('navbar');
-    if (navbar) navbar.innerHTML = data;
-    const wrapper = document.getElementById("categoriesWrapper");
-    const btnLeft = document.getElementById("scrollLeft");
-    const btnRight = document.getElementById("scrollRight");
+    // const navbar = document.getElementById('navbar');
+    // if (navbar) navbar.innerHTML = data;
+    // const wrapper = document.getElementById("categoriesWrapper");
+    // const btnLeft = document.getElementById("scrollLeft");
+    // const btnRight = document.getElementById("scrollRight");
 
-    function updateButtons() {
-      btnLeft.classList.toggle("disabled", wrapper.scrollLeft <= 0);
-      btnRight.classList.toggle(
-        "disabled",
-        wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth
-      );
-    }
+    // function updateButtons() {
+    //   btnLeft.classList.toggle("disabled", wrapper.scrollLeft <= 0);
+    //   btnRight.classList.toggle(
+    //     "disabled",
+    //     wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth
+    //   );
+    // }
 
-    function scrollCategories(amount) {
-      wrapper.scrollBy({ left: amount, behavior: "smooth" });
-      setTimeout(updateButtons, 400);
-    }
+    // function scrollCategories(amount) {
+    //   wrapper.scrollBy({ left: amount, behavior: "smooth" });
+    //   setTimeout(updateButtons, 400);
+    // }
 
-    btnLeft.addEventListener("click", () => {
-      if (!btnLeft.classList.contains("disabled")) scrollCategories(-300);
-    });
+    // btnLeft.addEventListener("click", () => {
+    //   if (!btnLeft.classList.contains("disabled")) scrollCategories(-300);
+    // });
 
-    btnRight.addEventListener("click", () => {
-      if (!btnRight.classList.contains("disabled")) scrollCategories(300);
-    });
+    // btnRight.addEventListener("click", () => {
+    //   if (!btnRight.classList.contains("disabled")) scrollCategories(300);
+    // });
 
-    updateButtons();
+    // updateButtons();
 
     // if (localStorage.getItem('token')) {
     //   document.getElementById('username').innerHTML = localStorage.getItem('user');
