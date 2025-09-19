@@ -107,6 +107,7 @@ fetch('navbar.html')
       const result = await response.json();
       // console.log(result);
       document.getElementById('cartNumber').innerHTML = result.numOfCartItems;
+      document.getElementById('cartNumberF').innerHTML = result.numOfCartItems;
       document.getElementById('cartPrice').innerHTML = result.data.totalCartPrice + ' EGP';
     }
     getCart();
@@ -125,6 +126,7 @@ fetch('navbar.html')
 
       let wishlistNumber = result.count;
       document.getElementById('wishlistNumber').innerHTML = wishlistNumber;
+      document.getElementById('wishlistNumberF').innerHTML = wishlistNumber;
     }
     getWishlist();
   })

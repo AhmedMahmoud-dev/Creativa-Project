@@ -61,6 +61,7 @@ async function getWishlist() {
   let data = result.data;
   let wishlistNumber = result.count;
   document.getElementById('wishlistNumber').innerHTML = wishlistNumber;
+  document.getElementById('wishlistNumberF').innerHTML = wishlistNumber;
 
   // console.log(data)
 
@@ -109,6 +110,7 @@ async function getCart() {
   const result = await response.json();
   // console.log('cart', result);
   document.getElementById('cartNumber').innerHTML = result.numOfCartItems;
+  document.getElementById('cartNumberF').innerHTML = result.numOfCartItems;
   document.getElementById('cartPrice').innerHTML = result.data.totalCartPrice + ' EGP';
 }
 
