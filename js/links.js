@@ -46,6 +46,22 @@ fetch('navbar.html')
     closeAside.addEventListener('click', (e) => {
       document.getElementById('aSide').classList.remove('open');
     })
+
+    let login = document.getElementById('login');
+    let username = document.getElementById('username');
+
+    if (localStorage.getItem('token')) {
+      login.textContent = 'Logout';
+      username.textContent = localStorage.getItem('user');
+    }
+
+    login.addEventListener('click', e => {
+      if (login.textContent == 'Logout') {
+        login.href = '';
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+      }
+    })
   })
 
 
