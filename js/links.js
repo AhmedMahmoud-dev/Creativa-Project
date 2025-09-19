@@ -49,14 +49,28 @@ fetch('navbar.html')
 
     let login = document.getElementById('login');
     let username = document.getElementById('username');
+    let usernameSmall = document.getElementById('usernameSmall');
+    let loginSmall = document.getElementById('loginSmall');
 
     if (localStorage.getItem('token')) {
       login.textContent = 'Logout';
+      loginSmall.textContent = 'Logout';
       username.textContent = localStorage.getItem('user');
+      usernameSmall.classList.remove('d-none');
+      usernameSmall.textContent = localStorage.getItem('user');
+
     }
 
     login.addEventListener('click', e => {
       if (login.textContent == 'Logout') {
+        login.href = '';
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+      }
+    })
+
+    loginSmall.addEventListener('click', e => {
+      if (loginSmall.textContent == 'Logout') {
         login.href = '';
         localStorage.removeItem('token');
         localStorage.removeItem('user');
