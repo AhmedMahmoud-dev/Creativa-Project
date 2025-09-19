@@ -217,12 +217,3 @@ fetch('latest-blog.html')
     const rec = document.getElementById('latest-blog');
     if (rec) rec.innerHTML = data;
   })
-
-
-fetch('slideshow.html')
-  .then(response => response.text())
-  .then(data => {
-    // document.getElementById('slideshow').innerHTML = data;
-    const rec = document.getElementById('slideshow');
-    if (rec) rec.innerHTML = data;
-  })
