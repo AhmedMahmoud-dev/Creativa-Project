@@ -565,3 +565,46 @@
 }
 
 /* NavBar End */
+#categoriesWrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  padding: 10px 0;
+  scrollbar-width: none; /* يخفي الـ Scrollbar في فايرفوكس */
+}
+
+#categoriesWrapper::-webkit-scrollbar {
+  display: none; /* يخفي الـ Scrollbar في كروم/سفاري */
+}
+
+#categoriesWrapper.dragging {
+  cursor: grabbing;
+}
+
+.category-item {
+  min-width: 120px; /* حجم الكارد */
+  flex: 0 0 auto;
+  scroll-snap-align: start; /* يظبط العنصر عند الوقوف */
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 10px;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle img {
+  max-width: 80%;
+  max-height: 80%;
+}
+#categoriesWrapper {
+  scroll-snap-type: x mandatory; /* يخلي العناصر تتسناب */
+}

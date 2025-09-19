@@ -4,37 +4,54 @@ fetch('navbar.html')
     document.getElementById('navbar').innerHTML = data;
     const navbar = document.getElementById('navbar');
     if (navbar) navbar.innerHTML = data;
-    // const wrapper = document.getElementById("categoriesWrapper");
-    // const btnLeft = document.getElementById("scrollLeft");
-    // const btnRight = document.getElementById("scrollRight");
+    const wrapper = document.getElementById("categoriesWrapper");
 
-    // function updateButtons() {
-    //   btnLeft.classList.toggle("disabled", wrapper.scrollLeft <= 0);
-    //   btnRight.classList.toggle(
-    //     "disabled",
-    //     wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth
-    //   );
-    // }
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+  
+    // للماوس
+    wrapper.addEventListener("mousedown", (e) => {
+      isDown = true;
+      wrapper.classList.add("dragging");
+      startX = e.pageX - wrapper.offsetLeft;
+      scrollLeft = wrapper.scrollLeft;
+    });
+  
+    wrapper.addEventListener("mouseleave", () => {
+      isDown = false;
+      wrapper.classList.remove("dragging");
+    });
+  
+    wrapper.addEventListener("mouseup", () => {
+      isDown = false;
+      wrapper.classList.remove("dragging");
+    });
+  
+    wrapper.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - wrapper.offsetLeft;
+      const walk = (x - startX) * 1.5; // سرعة السحب
+      wrapper.scrollLeft = scrollLeft - walk;
+    });
+  
+    // للتاتش (موبايل)
+    let touchStartX = 0;
+    wrapper.addEventListener("touchstart", (e) => {
+      touchStartX = e.touches[0].clientX;
+      scrollLeft = wrapper.scrollLeft;
+    });
+  
+    wrapper.addEventListener("touchmove", (e) => {
+      const touchX = e.touches[0].clientX;
+      const diff = touchStartX - touchX;
+      wrapper.scrollLeft = scrollLeft + diff;
+    });
 
-    // function scrollCategories(amount) {
-    //   wrapper.scrollBy({ left: amount, behavior: "smooth" });
-    //   setTimeout(updateButtons, 400);
-    // }
 
-    // btnLeft.addEventListener("click", () => {
-    //   if (!btnLeft.classList.contains("disabled")) scrollCategories(-300);
-    // });
 
-    // btnRight.addEventListener("click", () => {
-    //   if (!btnRight.classList.contains("disabled")) scrollCategories(300);
-    // });
 
-    // updateButtons();
-
-    // if (localStorage.getItem('token')) {
-    //   document.getElementById('username').innerHTML = localStorage.getItem('user');
-    //   document.getElementById('logged').classList.add('d-none');
-    // }
 
     const openAside = document.getElementById('btn');
     const closeAside = document.getElementById('close');
