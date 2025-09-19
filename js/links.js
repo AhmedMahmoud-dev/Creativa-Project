@@ -76,6 +76,22 @@ fetch('navbar.html')
         localStorage.removeItem('user');
       }
     })
+
+
+    async function getCart() {
+      let response = await fetch(`https://ecommerce.routemisr.com/api/v1/cart`, {
+        method: 'GET',
+        headers: {
+          // "Content-Type": "Application/json",
+          token: localStorage.getItem("token"),
+        },
+      })
+
+      const result = await response.json();
+      console.log(result);
+      document.getElementById('cartNumber').innerHTML = result.numOfCartItems;
+    }
+    getCart()
   })
 
 
@@ -94,6 +110,7 @@ fetch('recommended.html')
     // document.getElementById('recommended').innerHTML = data;
     const rec = document.getElementById('recommended');
     if (rec) rec.innerHTML = data;
+    const addBtn = document.getElementById('add');
   })
 
 
@@ -198,5 +215,14 @@ fetch('latest-blog.html')
   .then(data => {
     // document.getElementById('latest-blog').innerHTML = data;
     const rec = document.getElementById('latest-blog');
+    if (rec) rec.innerHTML = data;
+  })
+
+
+fetch('slideshow.html')
+  .then(response => response.text())
+  .then(data => {
+    // document.getElementById('slideshow').innerHTML = data;
+    const rec = document.getElementById('slideshow');
     if (rec) rec.innerHTML = data;
   })
