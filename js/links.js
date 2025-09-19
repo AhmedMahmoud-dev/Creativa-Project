@@ -9,7 +9,7 @@ fetch('navbar.html')
     let isDown = false;
     let startX;
     let scrollLeft;
-  
+
     // للماوس
     wrapper.addEventListener("mousedown", (e) => {
       isDown = true;
@@ -17,17 +17,17 @@ fetch('navbar.html')
       startX = e.pageX - wrapper.offsetLeft;
       scrollLeft = wrapper.scrollLeft;
     });
-  
+
     wrapper.addEventListener("mouseleave", () => {
       isDown = false;
       wrapper.classList.remove("dragging");
     });
-  
+
     wrapper.addEventListener("mouseup", () => {
       isDown = false;
       wrapper.classList.remove("dragging");
     });
-  
+
     wrapper.addEventListener("mousemove", (e) => {
       if (!isDown) return;
       e.preventDefault();
@@ -35,14 +35,14 @@ fetch('navbar.html')
       const walk = (x - startX) * 1.5; // سرعة السحب
       wrapper.scrollLeft = scrollLeft - walk;
     });
-  
+
     // للتاتش (موبايل)
     let touchStartX = 0;
     wrapper.addEventListener("touchstart", (e) => {
       touchStartX = e.touches[0].clientX;
       scrollLeft = wrapper.scrollLeft;
     });
-  
+
     wrapper.addEventListener("touchmove", (e) => {
       const touchX = e.touches[0].clientX;
       const diff = touchStartX - touchX;
@@ -99,16 +99,34 @@ fetch('navbar.html')
       let response = await fetch(`https://ecommerce.routemisr.com/api/v1/cart`, {
         method: 'GET',
         headers: {
-          // "Content-Type": "Application/json",
+          "Content-Type": "Application/json",
           token: localStorage.getItem("token"),
         },
       })
 
       const result = await response.json();
-      console.log(result);
+      // console.log(result);
       document.getElementById('cartNumber').innerHTML = result.numOfCartItems;
+      document.getElementById('cartPrice').innerHTML = result.data.totalCartPrice + ' EGP';
     }
-    getCart()
+    getCart();
+
+    async function getWishlist() {
+      let response = await fetch(`https://ecommerce.routemisr.com/api/v1/wishlist`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "Application/json",
+          token: localStorage.getItem("token"),
+        }
+      });
+
+      const result = await response.json();
+      // console.log('wishlist', result);
+
+      let wishlistNumber = result.count;
+      document.getElementById('wishlistNumber').innerHTML = wishlistNumber;
+    }
+    getWishlist();
   })
 
 

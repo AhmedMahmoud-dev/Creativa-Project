@@ -61,6 +61,7 @@ async function getCart() {
   const result = await response.json();
   // console.log(result);
   document.getElementById('cartNumber').innerHTML = result.numOfCartItems;
+  document.getElementById('cartPrice').innerHTML = result.data.totalCartPrice + ' EGP';
 
   let cartona = '';
 
@@ -148,3 +149,23 @@ async function update(method, ID) {
 
   getCart();
 }
+
+
+async function getWishlist() {
+  let response = await fetch(`https://ecommerce.routemisr.com/api/v1/wishlist`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "Application/json",
+      token: localStorage.getItem("token"),
+    }
+  });
+
+  const result = await response.json();
+  console.log('wishlist', result);
+
+  let data = result.data;
+  let wishlistNumber = result.count;
+  document.getElementById('wishlistNumber').innerHTML = wishlistNumber;
+}
+
+getWishlist();
