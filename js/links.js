@@ -106,10 +106,13 @@ fetch('navbar.html')
 
       const result = await response.json();
       // console.log(result);
-      document.getElementById('cartNumber').innerHTML = result.numOfCartItems;
-      document.getElementById('cartNumberF').innerHTML = result.numOfCartItems;
-      document.getElementById('cartPrice').innerHTML = result.data.totalCartPrice + ' EGP';
-      document.getElementById('cartPriceF').innerHTML = result.data.totalCartPrice + ' EGP';
+
+      if (localStorage.getItem('token')) {
+        document.getElementById('cartNumber').innerHTML = result.numOfCartItems;
+        document.getElementById('cartNumberF').innerHTML = result.numOfCartItems;
+        document.getElementById('cartPrice').innerHTML = result.data.totalCartPrice + ' EGP';
+        document.getElementById('cartPriceF').innerHTML = result.data.totalCartPrice + ' EGP';
+      }
     }
     getCart();
 
@@ -126,8 +129,11 @@ fetch('navbar.html')
       // console.log('wishlist', result);
 
       let wishlistNumber = result.count;
-      document.getElementById('wishlistNumber').innerHTML = wishlistNumber;
-      document.getElementById('wishlistNumberF').innerHTML = wishlistNumber;
+
+      if (localStorage.getItem('token')) {
+        document.getElementById('wishlistNumber').innerHTML = wishlistNumber;
+        document.getElementById('wishlistNumberF').innerHTML = wishlistNumber;
+      }
     }
     getWishlist();
   })
