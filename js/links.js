@@ -109,6 +109,7 @@ fetch('navbar.html')
       document.getElementById('cartNumber').innerHTML = result.numOfCartItems;
       document.getElementById('cartNumberF').innerHTML = result.numOfCartItems;
       document.getElementById('cartPrice').innerHTML = result.data.totalCartPrice + ' EGP';
+      document.getElementById('cartPriceF').innerHTML = result.data.totalCartPrice + ' EGP';
     }
     getCart();
 
